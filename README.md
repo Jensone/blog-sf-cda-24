@@ -55,5 +55,38 @@ Pour travailler plus facilement avec Symfony, il est conseillé d'installer les 
 
 - PHP Intelephense
 - Twig Language 2
+- Twig code snippets
 - Namespace Resolver
 - Prettier
+
+## Notre première entité
+
+Dans ce projet de blog, nous avons besoin d'une entité `Post` qui aura les propriétés suivantes :
+
+- id
+- title
+- slug
+- content
+- image
+- created_at
+- updated_at
+
+Pour créer cette entité, nous avons utilisé la commande suivante :
+
+```bash
+symfony console make:entity
+```
+
+Ensuite, nous avons répondu aux questions de l'assistant pas à pas avec les information correspondante à nos besoins.
+
+Lorsque qu'on a terminé avec la création de notre entité et cela sera pareil pour les autres, on effectue une migration (représentation en base de données de notre entité) avec la commande suivante :
+
+```bash
+symfony console make:migration
+```
+
+Puis on exécute la migration avec la commande suivante :
+
+```bash
+symfony console doctrine:migrations:migrate
+```
